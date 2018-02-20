@@ -9,3 +9,14 @@ D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\ResourceOwner
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.dll
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.pdb
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.csprojResolveAssemblyReference.cache
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\bin\Debug\netcoreapp2.0\ResourceOwnerClient.deps.json
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\bin\Debug\netcoreapp2.0\ResourceOwnerClient.runtimeconfig.json
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\bin\Debug\netcoreapp2.0\ResourceOwnerClient.runtimeconfig.dev.json
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\bin\Debug\netcoreapp2.0\ResourceOwnerClient.dll
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\bin\Debug\netcoreapp2.0\ResourceOwnerClient.pdb
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.csprojResolveAssemblyReference.cache
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.csproj.CoreCompileInputs.cache
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.AssemblyInfoInputs.cache
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.AssemblyInfo.cs
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.dll
+D:\work\EmployeePortalDemo\src\ResourceOwnerClient\obj\Debug\netcoreapp2.0\ResourceOwnerClient.pdb

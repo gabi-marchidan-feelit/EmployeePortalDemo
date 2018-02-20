@@ -9,3 +9,14 @@ D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Client\obj\De
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Client\obj\Debug\netcoreapp2.0\Client.dll
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Client\obj\Debug\netcoreapp2.0\Client.pdb
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Client\obj\Debug\netcoreapp2.0\Client.csprojResolveAssemblyReference.cache
+D:\work\EmployeePortalDemo\src\Client\bin\Debug\netcoreapp2.0\Client.deps.json
+D:\work\EmployeePortalDemo\src\Client\bin\Debug\netcoreapp2.0\Client.runtimeconfig.json
+D:\work\EmployeePortalDemo\src\Client\bin\Debug\netcoreapp2.0\Client.runtimeconfig.dev.json
+D:\work\EmployeePortalDemo\src\Client\bin\Debug\netcoreapp2.0\Client.dll
+D:\work\EmployeePortalDemo\src\Client\bin\Debug\netcoreapp2.0\Client.pdb
+D:\work\EmployeePortalDemo\src\Client\obj\Debug\netcoreapp2.0\Client.csprojResolveAssemblyReference.cache
+D:\work\EmployeePortalDemo\src\Client\obj\Debug\netcoreapp2.0\Client.csproj.CoreCompileInputs.cache
+D:\work\EmployeePortalDemo\src\Client\obj\Debug\netcoreapp2.0\Client.AssemblyInfoInputs.cache
+D:\work\EmployeePortalDemo\src\Client\obj\Debug\netcoreapp2.0\Client.AssemblyInfo.cs
+D:\work\EmployeePortalDemo\src\Client\obj\Debug\netcoreapp2.0\Client.dll
+D:\work\EmployeePortalDemo\src\Client\obj\Debug\netcoreapp2.0\Client.pdb

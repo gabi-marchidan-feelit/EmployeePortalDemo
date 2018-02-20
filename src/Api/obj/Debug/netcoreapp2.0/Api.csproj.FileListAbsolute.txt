@@ -9,3 +9,14 @@ D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Api\obj\Debug
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfo.cs
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Api\obj\Debug\netcoreapp2.0\Api.dll
 D:\work\IdentityServer4.Samples\Quickstarts\7_JavaScriptClient\src\Api\obj\Debug\netcoreapp2.0\Api.pdb
+D:\work\EmployeePortalDemo\src\Api\bin\Debug\netcoreapp2.0\Api.deps.json
+D:\work\EmployeePortalDemo\src\Api\bin\Debug\netcoreapp2.0\Api.runtimeconfig.json
+D:\work\EmployeePortalDemo\src\Api\bin\Debug\netcoreapp2.0\Api.runtimeconfig.dev.json
+D:\work\EmployeePortalDemo\src\Api\bin\Debug\netcoreapp2.0\Api.dll
+D:\work\EmployeePortalDemo\src\Api\bin\Debug\netcoreapp2.0\Api.pdb
+D:\work\EmployeePortalDemo\src\Api\obj\Debug\netcoreapp2.0\Api.csprojResolveAssemblyReference.cache
+D:\work\EmployeePortalDemo\src\Api\obj\Debug\netcoreapp2.0\Api.csproj.CoreCompileInputs.cache
+D:\work\EmployeePortalDemo\src\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfoInputs.cache
+D:\work\EmployeePortalDemo\src\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfo.cs
+D:\work\EmployeePortalDemo\src\Api\obj\Debug\netcoreapp2.0\Api.dll
+D:\work\EmployeePortalDemo\src\Api\obj\Debug\netcoreapp2.0\Api.pdb

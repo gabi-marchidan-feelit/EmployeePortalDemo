@@ -12585,17 +12585,16 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\work\\IdentityServer4.Samples\\Quickstarts\\7_JavaScriptClient\\src\\Api\\Api.csproj",
+      "projectUniqueName": "D:\\work\\EmployeePortalDemo\\src\\Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "D:\\work\\IdentityServer4.Samples\\Quickstarts\\7_JavaScriptClient\\src\\Api\\Api.csproj",
+      "projectPath": "D:\\work\\EmployeePortalDemo\\src\\Api\\Api.csproj",
       "packagesPath": "C:\\Users\\gabriel\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\IdentityServer4.Samples\\Quickstarts\\7_JavaScriptClient\\src\\Api\\obj\\",
+      "outputPath": "D:\\work\\EmployeePortalDemo\\src\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "D:\\work\\IdentityServer4.Samples\\NuGet.Config",
         "C:\\Users\\gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -12603,6 +12602,7 @@
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

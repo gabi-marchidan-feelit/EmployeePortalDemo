@@ -12534,17 +12534,16 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\work\\IdentityServer4.Samples\\Quickstarts\\7_JavaScriptClient\\src\\MvcClient\\MvcClient.csproj",
+      "projectUniqueName": "D:\\work\\EmployeePortalDemo\\src\\MvcClient\\MvcClient.csproj",
       "projectName": "MvcClient",
-      "projectPath": "D:\\work\\IdentityServer4.Samples\\Quickstarts\\7_JavaScriptClient\\src\\MvcClient\\MvcClient.csproj",
+      "projectPath": "D:\\work\\EmployeePortalDemo\\src\\MvcClient\\MvcClient.csproj",
       "packagesPath": "C:\\Users\\gabriel\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\IdentityServer4.Samples\\Quickstarts\\7_JavaScriptClient\\src\\MvcClient\\obj\\",
+      "outputPath": "D:\\work\\EmployeePortalDemo\\src\\MvcClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "D:\\work\\IdentityServer4.Samples\\NuGet.Config",
         "C:\\Users\\gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -12552,6 +12551,7 @@
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

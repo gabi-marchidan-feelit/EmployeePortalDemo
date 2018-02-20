@@ -92,7 +92,7 @@ namespace QuickstartIdentityServer
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
 
-                    RedirectUris = { string.Format("http://localhost:{0}/callback.html",jsClientPort) },
+                    RedirectUris = { string.Format("http://localhost:{0}/callback",jsClientPort) },
                     PostLogoutRedirectUris = { string.Format("http://localhost:{0}/index.html", jsClientPort) },
                     AllowedCorsOrigins = { string.Format("http://localhost:{0}", jsClientPort) },
 
