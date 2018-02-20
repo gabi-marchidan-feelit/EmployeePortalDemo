@@ -30,7 +30,7 @@ namespace QuickstartIdentityServer
         }
 
         // clients want to access resources (aka scopes)
-        public static IEnumerable<Client> GetClients()
+        public static IEnumerable<Client> GetClients(int jsClientPort)
         {
             // client credentials client
             return new List<Client>
@@ -92,9 +92,9 @@ namespace QuickstartIdentityServer
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
 
-                    RedirectUris = { "http://localhost:5003/callback.html" },
-                    PostLogoutRedirectUris = { "http://localhost:5003/index.html" },
-                    AllowedCorsOrigins = { "http://localhost:5003" },
+                    RedirectUris = { string.Format("http://localhost:{0}/callback.html",jsClientPort) },
+                    PostLogoutRedirectUris = { string.Format("http://localhost:{0}/index.html", jsClientPort) },
+                    AllowedCorsOrigins = { string.Format("http://localhost:{0}", jsClientPort) },
 
                     AllowedScopes =
                     {
