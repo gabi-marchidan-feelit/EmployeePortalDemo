@@ -1,0 +1,107 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+/* Variables */
+$vin-blue: #5bb7db;
+$vin-green: #60b044;
+$vin-red: #ff0000;
+
+/* Styles */
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.4em;
+  color: #4d4d4d;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
+}
+
+.modal-content{
+    background-color: darkcyan;
+  }
+  .btn-link{
+    color:white;
+  }
+  .modal-heading h2{
+    color:#ffffff;
+  }
+
+/*LOGIN FORM*/
+.logo {
+  width: 100px;
+  float: left;
+}
+
+.header {
+  height: 50px;
+}
+.header-text {
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.login-form {
+  max-width: 350px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  padding: 20px 20px 50px 20px;
+}
+
+.login-form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #999999;
+  border-radius: 0;  
+}
+
+.login-form input {
+  margin: 30px 0;
+  color: #bababa;
+}
+
+.login-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bababa;
+}
+.login-form input::-moz-placeholder { /* Firefox 19+ */
+  color: #bababa;
+}
+.login-form input:-ms-input-placeholder { /* IE 10+ */
+  color: #bababa;
+}
+.login-form input:-moz-placeholder { /* Firefox 18- */
+  color: #bababa;
+}
+.login-form-title {
+  font-weight: bold;
+  padding: 50px 0;
+}
+
+.login-button {
+  background: #8C1B35;
+  color: #ffffff;
+  border: 1px solid #8C1B35;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.16);
+  cursor: pointer;
+}
+
+.register-button {
+  color: #8C1B35;
+  border: 1px solid #8C1B35;
+  cursor: pointer;
+}
+
+.login-group-buttons button {
+  width: 100%;
+  border-radius: 0;
+}
+
+.forgot-password {
+  color: #8C1B35;
+  font-weight: bold;
+  float: right;
+  font-size: 12px;
+  padding: 15px 0;
+}
+/*END LOGIN FORM*/
