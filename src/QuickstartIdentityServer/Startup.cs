@@ -33,7 +33,16 @@ namespace QuickstartIdentityServer
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients(jsClientPort))
                 .AddTestUsers(Config.GetUsers());
-
+            services.AddCors(options =>
+            {
+                // this defines a CORS policy called "default"
+                options.AddPolicy("default", policy =>
+                {
+                    policy.WithOrigins(string.Format("http://localhost:{0}", jsClientPort))
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
             System.Console.WriteLine("++ Js Client Port:  " + Configuration.GetSection("AppSettings")["JsClientPort"]);
 
 
