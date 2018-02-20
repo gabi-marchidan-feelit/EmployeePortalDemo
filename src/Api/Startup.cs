@@ -2,14 +2,24 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Api
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; private set; }
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            var jsClientPort = int.Parse(Configuration.GetSection("AppSettings")["JsClientPort"]);
+
             services.AddMvcCore()
                 .AddAuthorization()
                 .AddJsonFormatters();
@@ -28,11 +38,13 @@ namespace Api
                 // this defines a CORS policy called "default"
                 options.AddPolicy("default", policy =>
                 {
-                    policy.WithOrigins(string.Format("http://localhost:5003"))
+                    policy.WithOrigins(string.Format("http://localhost:{0}",jsClientPort))
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
             });
+
+            System.Console.WriteLine("++ Js Client Port:  " + jsClientPort);
         }
 
         public void Configure(IApplicationBuilder app)
