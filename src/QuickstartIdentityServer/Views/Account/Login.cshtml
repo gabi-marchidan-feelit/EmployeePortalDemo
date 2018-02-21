@@ -13,29 +13,31 @@
             <div class="container">
               <div class="login-form">
                 <form asp-route="Login">
-                  <input type="hidden" asp-for="ReturnUrl" />
-                  <h3 class="login-form-title text-center">EMPLOYEE PORTAL LOGIN</h3>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Employee Badge #" asp-for="Username" autofocus id="username">
+                  <fieldset>
+                    <input type="hidden" asp-for="ReturnUrl" />
+                    <h3 class="login-form-title text-center">EMPLOYEE PORTAL LOGIN</h3>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Employee Badge #" asp-for="Username" autofocus id="username">
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input type="password" class="form-control" placeholder="Password" asp-for="Password" autocomplete="off" id="password">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="password" class="form-control" placeholder="Password" asp-for="Password" autocomplete="off" id="password">
+                      </div>
+                      <span class="forgot-password">FORGOT PASSWORD</span>
+                      <div class="form-group login-remember">
+                          <label asp-for="RememberLogin" class="remember-me-checkbox-container">Remember me
+                            <input type="checkbox" checked="checked">
+                            <div class="checkmark"></div>
+                          </label>
+                      </div>
                     </div>
-                    <span class="forgot-password">FORGOT PASSWORD</span>
-                    <div class="form-group login-remember">
-                        <label asp-for="RememberLogin" class="remember-me-checkbox-container">Remember me
-                          <input type="checkbox" checked="checked">
-                          <div class="checkmark"></div>
-                        </label>
+                    <div class="form-group login-group-buttons">
+                      <button class="btn btn-lg col-xs-12 login-button" name="button" value="login">LOGIN</button>
+                      <button class="btn btn-lg register-btn col-xs-12 register-button">REGISTER</button>
                     </div>
-                  </div>
-                  <div class="form-group login-group-buttons">
-                    <button class="btn btn-lg col-xs-12 login-button">LOGIN</button>
-                    <button class="btn btn-lg register-btn col-xs-12 register-button">REGISTER</button>
-                  </div>
+                  <fieldset>
                 </form>
               </div>
             </div>
