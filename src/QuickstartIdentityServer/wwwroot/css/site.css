@@ -1,82 +1,196 @@
-﻿body {
-  margin-top: 65px;
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway');
+/* Styles */
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.4em;
+  color: #4d4d4d;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
 }
-.navbar-header {
-  position: relative;
-  top: -4px;
-}
-.navbar-brand > .icon-banner {
-  position: relative;
-  top: -2px;
-  display: inline;
-}
-.icon {
-  position: relative;
-  top: -10px;
-}
-.logged-out iframe {
-  display: none;
-  width: 0;
-  height: 0;
-}
-.page-consent .client-logo {
+
+.modal-content{
+    background-color: darkcyan;
+  }
+  .btn-link{
+    color:white;
+  }
+  .modal-heading h2{
+    color:#ffffff;
+  }
+
+/*LOGIN FORM*/
+.logo {
+  width: 100px;
   float: left;
 }
-.page-consent .client-logo img {
-  width: 80px;
-  height: 80px;
+
+.header {
+  height: 50px;
 }
-.page-consent .consent-buttons {
-  margin-top: 25px;
+.header-text {
+  padding-top: 20px;
+  font-weight: bold;
 }
-.page-consent .consent-form .consent-scopecheck {
+
+.login-form {
+  max-width: 360px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  padding: 20px 20px 50px 20px;
+  min-height: 550px;
+}
+
+.login-form .input-group {
+  display: block;
+}
+
+.login-form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #999999;
+  border-radius: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  outline:0px !important;
+  -webkit-appearance:none;
+}
+
+.login-form input {
+  margin: 45px 0;
+  color: #bababa;
+}
+
+.login-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bababa;
+}
+.login-form input::-moz-placeholder { /* Firefox 19+ */
+  color: #bababa;
+}
+.login-form input:-ms-input-placeholder { /* IE 10+ */
+  color: #bababa;
+}
+.login-form input:-moz-placeholder { /* Firefox 18- */
+  color: #bababa;
+}
+.login-form-title {
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.login-button {
+  background: #8C1B35;
+  color: #ffffff;
+  border: 1px solid #8C1B35;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.16);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 14px;
+}
+
+.login-button:active, .login-button:hover {
+  color: #ffffff;
+}
+
+.register-button {
+  color: #8C1B35;
+  border: 1px solid #8C1B35;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 14px;
+}
+
+.register-button:active, .register-button:hover {
+  color: #ffffff;
+}
+
+.login-group-buttons button {
+  width: 100%;
+  border-radius: 0;
+}
+
+.forgot-password {
+  color: #8C1B35;
+  font-weight: bold;
+  float: right;
+  padding: 30px 0 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-remember {
   display: inline-block;
-  margin-right: 5px;
+  margin: 95px 0 0;
 }
-.page-consent .consent-form .consent-description {
-  margin-left: 25px;
+
+.remember-me-checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal;
 }
-.page-consent .consent-form .consent-description label {
-  font-weight: normal;
+
+.remember-me-checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    margin: 0;
+    z-index: 99999;
+    left: 0;
+    bottom: 0;
 }
-.page-consent .consent-form .consent-remember {
-  padding-left: 16px;
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    float: left;
+    margin-right: 10px;
 }
-.grants .page-header {
-  margin-bottom: 10px;
+
+.remember-me-checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
 }
-.grants .grant {
-  margin-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid lightgray;
+
+.remember-me-checkbox-container input:checked ~ .checkmark {
+    background-color: #8C1B35;
+    float: left;
+    margin-right: 10px;
 }
-.grants .grant img {
-  width: 100px;
-  height: 100px;
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
 }
-.grants .grant .clientname {
-  font-size: 140%;
-  font-weight: bold;
+
+.remember-me-checkbox-container input:checked ~ .checkmark:after {
+    display: block;
 }
-.grants .grant .granttype {
-  font-size: 120%;
-  font-weight: bold;
+
+.remember-me-checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
-.grants .grant .created {
-  font-size: 120%;
-  font-weight: bold;
-}
-.grants .grant .expires {
-  font-size: 120%;
-  font-weight: bold;
-}
-.grants .grant li {
-  list-style-type: none;
-  display: inline;
-}
-.grants .grant li:after {
-  content: ', ';
-}
-.grants .grant li:last-child:after {
-  content: '';
-}
+/*END LOGIN FORM*/
