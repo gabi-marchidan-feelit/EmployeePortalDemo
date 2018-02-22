@@ -292,6 +292,15 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+projectName.iml
+/*.classpath
+/.classpath
+/.springBeans
+*.DS_Store
+*.iml
+/build
+/local.properties
+target/
 
 # CodeRush
 .cr/
