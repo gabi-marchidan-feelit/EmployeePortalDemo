@@ -11,8 +11,8 @@ export default class OidcCallback extends Component {
       .then(function () {
         // window.location = "index.html";
         _props.history.push("/");
-      }).catch(function (e) {
-        console.error(e);
+      }).catch(function () {
+        // console.error(e);
       });
   }
 

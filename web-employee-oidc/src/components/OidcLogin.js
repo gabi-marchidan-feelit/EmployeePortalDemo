@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import JSONTree from 'react-json-tree'
 
 const API_URL = 'http://localhost';
 
@@ -19,6 +20,7 @@ export default class OidcLogin extends Component {
 
     this.state = {
       currentUser: 'You are not logged in',
+      objectToBeautify: '{ "message":"Click on Call API button to see the results"}'
     };
     
     this.login = this.login.bind(this);    
@@ -30,17 +32,14 @@ export default class OidcLogin extends Component {
     const _this = this; 
     mgr.getUser().then(function (user) {
       if (user) {
-        // console.log(user.profile);
         _this.setState({
           currentUser: user.profile.sid,
         });
-        // log("User logged in", user.profile);
       }
       else {
         _this.setState({
           currentUser: 'You are not logged in',
         });
-        // log("User not logged in");
       }
   });
   }
@@ -54,6 +53,7 @@ export default class OidcLogin extends Component {
   }
 
   api() {
+    const _this = this;
     mgr.getUser()
       .then(function (user) {
         const url = `${API_URL}:5001/identity`;
@@ -61,16 +61,26 @@ export default class OidcLogin extends Component {
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url);
         xhr.onload = function () {
-            console.log('xhr STATUS:' +  xhr.status);
-            console.log('xhr RESPONSE' + JSON.parse(xhr.responseText));
+            let currentObject = xhr.responseText.toString();
+            const status = xhr.status;
+
+            if (status == 401) {
+              currentObject = `{ "message": "${xhr.statusText}"}`
+            }
+            debugger;
+            _this.setState({
+              objectToBeautify: currentObject
+            });
         };
-        xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
+        xhr.setRequestHeader("Authorization", "Bearer " + (user !== null ? user.access_token : ''));
         xhr.send();
       });
   }
 
 	render() {
-    const {currentUser} = this.state;
+    const {currentUser, objectToBeautify} = this.state;
+    // const json = JSON.parse(objectToBeautify);
+    const json = JSON.parse(objectToBeautify);
 		return (
 			<div>
         <button onClick={this.login}>Login</button>
@@ -79,6 +89,9 @@ export default class OidcLogin extends Component {
 
         <div className="current-user">
           You are currently logged in with SID: {currentUser}
+        </div>
+        <div className="json-display">
+          <JSONTree data={json} />
         </div>
       </div>
 		);
