@@ -65,7 +65,7 @@ export default class OidcLogin extends Component {
             const status = xhr.status;
 
             if (status == 401) {
-              currentObject = `{ "message": "${xhr.statusText}"}`
+              currentObject = `{ "message": "${xhr.statusText}", "status": "${xhr.status}"}`
             }
             debugger;
             _this.setState({
