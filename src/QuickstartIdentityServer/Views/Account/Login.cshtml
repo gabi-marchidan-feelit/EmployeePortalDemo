@@ -1,6 +1,7 @@
 ﻿@model LoginViewModel
 
-<div class="login-page">
+<div class="container login-page-container">
+  <div class="login-page">
     @Html.Partial("_ValidationSummary")
 
     <div class="row">
@@ -8,7 +9,8 @@
         @if (Model.EnableLocalLogin)
         {
             <div class="header">
-              <h6 class="header-text">EMPLOYEE PORTAL</h6>
+              <img class="logo" alt="logo" src="~/images/rgis-logo.png" />
+              <h5 class="header-text">EMPLOYEE PORTAL</h5>
             </div>
             <div class="container">
               <div class="login-form">
@@ -77,4 +79,5 @@
             </div>
         }
     </div>
+  </div>
 </div>
