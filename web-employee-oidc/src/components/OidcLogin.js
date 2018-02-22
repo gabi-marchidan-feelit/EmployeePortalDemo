@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import JSONTree from 'react-json-tree'
+import JSONTree from 'react-json-tree';
 
 const API_URL = 'http://localhost';
 
@@ -65,9 +65,8 @@ export default class OidcLogin extends Component {
             const status = xhr.status;
 
             if (status == 401) {
-              currentObject = `{ "message": "${xhr.statusText}", "status": "${xhr.status}"}`
+              currentObject = `{ "message": "${xhr.statusText}", "status": "${xhr.status}"}`;
             }
-            debugger;
             _this.setState({
               objectToBeautify: currentObject
             });
