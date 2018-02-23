@@ -82,7 +82,7 @@ export default class OidcLogin extends Component {
     const _this = this;
     mgr.getUser()
       .then(function (user) {
-        const url = `${API_URL}:5001/identity`;
+        const url = `${API_URL}:8080/info`;
 
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url);
