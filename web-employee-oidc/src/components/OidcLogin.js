@@ -26,6 +26,8 @@ export default class OidcLogin extends Component {
     this.login = this.login.bind(this);    
     this.logout = this.logout.bind(this);    
     this.api = this.api.bind(this);    
+    this.api2 = this.api2.bind(this);    
+    this.api3 = this.api3.bind(this);    
   }
 
   componentWillMount() {
@@ -53,6 +55,54 @@ export default class OidcLogin extends Component {
   }
 
   api() {
+    const _this = this;
+    mgr.getUser()
+      .then(function (user) {
+        const url = `${API_URL}:5001/identity`;
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onload = function () {
+            let currentObject = xhr.responseText.toString();
+            const status = xhr.status;
+
+            if (status == 401) {
+              currentObject = `{ "message": "${xhr.statusText}", "status": "${xhr.status}"}`;
+            }
+            _this.setState({
+              objectToBeautify: currentObject
+            });
+        };
+        xhr.setRequestHeader("Authorization", "Bearer " + (user !== null ? user.access_token : ''));
+        xhr.send();
+      });
+  }
+
+  api2() {
+    const _this = this;
+    mgr.getUser()
+      .then(function (user) {
+        const url = `${API_URL}:5001/identity`;
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onload = function () {
+            let currentObject = xhr.responseText.toString();
+            const status = xhr.status;
+
+            if (status == 401) {
+              currentObject = `{ "message": "${xhr.statusText}", "status": "${xhr.status}"}`;
+            }
+            _this.setState({
+              objectToBeautify: currentObject
+            });
+        };
+        xhr.setRequestHeader("Authorization", "Bearer " + (user !== null ? user.access_token : ''));
+        xhr.send();
+      });
+  }
+  
+  api3() {
     const _this = this;
     mgr.getUser()
       .then(function (user) {
@@ -104,6 +154,8 @@ export default class OidcLogin extends Component {
 			<div>
         <button onClick={this.login}>Login</button>
         <button onClick={this.api}>Call API</button>
+        <button onClick={this.api2}>Call API 2</button>
+        <button onClick={this.api3}>Call API 3</button>
         <button onClick={this.logout}>Logout</button>
 
         <div className="current-user">
