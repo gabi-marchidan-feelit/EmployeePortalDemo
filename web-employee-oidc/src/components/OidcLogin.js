@@ -73,7 +73,9 @@ export default class OidcLogin extends Component {
               objectToBeautify: currentObject
             });
         };
-        xhr.setRequestHeader("Authorization", "Bearer " + (user !== null ? user.access_token : ''));
+        if (user !== null) {
+          xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
+        }
         xhr.send();
       });
   }
@@ -97,7 +99,9 @@ export default class OidcLogin extends Component {
               objectToBeautify: currentObject
             });
         };
-        xhr.setRequestHeader("Authorization", "Bearer " + (user !== null ? user.access_token : ''));
+        if (user !== null) {
+          xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
+        }
         xhr.send();
       });
   }
@@ -121,7 +125,9 @@ export default class OidcLogin extends Component {
               objectToBeautify: currentObject
             });
         };
-        xhr.setRequestHeader("Authorization", "Bearer " + (user !== null ? user.access_token : ''));
+        if (user !== null) {
+          xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
+        }
         xhr.send();
       });
   }
