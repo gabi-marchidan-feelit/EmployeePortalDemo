@@ -17,6 +17,9 @@ export default class ScheduleList extends Component {
               <button type="button" className="btn schedule-confirm-week-button">CONFIRM WEEK</button>
             </div>
           </div>
+          <div className="row">
+            
+          </div>
         </div>
       </div>
     );

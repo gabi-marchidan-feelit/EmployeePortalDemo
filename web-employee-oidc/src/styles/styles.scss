@@ -216,6 +216,9 @@ button:focus {
   width: 100%;
   z-index: 10;
 }
+.react-datepicker-popper {
+  transform: translate3d(85px, 100px, 0px) !important;
+}
 
 // END DATE PICKER
 
