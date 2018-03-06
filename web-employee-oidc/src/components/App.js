@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import ScheduleList from '../containers/scheduleList';
 import NotFoundPage from './pages/NotFoundPage';
 import Login from '../containers/forms/Login';
 import OidcLogin from './OidcLogin';
@@ -21,7 +21,7 @@ class App extends React.Component {
           <Route exact path="/" component={OidcLogin} />
           <Route exact path="/callback" component={OidcCallback} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/home" component={HomePage} />
+          <Route exact path="/schedule" component={ScheduleList} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
