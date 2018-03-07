@@ -60,7 +60,10 @@ export default class Datepicker extends Component {
               dateFormat="MMM. DD"
               onChangeRaw={(event) =>
                 this.handleChangeRaw(event.target.value)}
-              withPortal />
+              withPortal 
+              minDate={moment()}
+              maxDate={moment().add(12, "months")}
+              showDisabledMonthNavigation />
           </div>
           <div className="datepicker-next-month"> - {nextWeek}</div>  
           <span onClick={this.handleNextMonth}>
