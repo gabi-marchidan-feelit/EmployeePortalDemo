@@ -56,10 +56,11 @@ export default class Datepicker extends Component {
               className="col-md-12"
               selected={this.state.startDate}
               onChange={this.handleChange}
-              highlightDates={[moment(this.state.startDate).subtract(7, "days"), moment(this.state.startDate).add(7, "days")]}
+              highlightDates={[moment(this.state.startDate).add(7, "days")]}
               dateFormat="MMM. DD"
               onChangeRaw={(event) =>
-                this.handleChangeRaw(event.target.value)} />
+                this.handleChangeRaw(event.target.value)}
+              withPortal />
           </div>
           <div className="datepicker-next-month"> - {nextWeek}</div>  
           <span onClick={this.handleNextMonth}>
