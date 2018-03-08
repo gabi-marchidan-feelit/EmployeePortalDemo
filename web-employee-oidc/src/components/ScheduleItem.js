@@ -34,22 +34,24 @@ export default class ScheduleItem extends Component {
             <div className="schedule-card-details-item">
               Estimated Duration:<span className="schedule-card-details-item-type">5 hours</span>
             </div>
-            <div class="schedule-card-buttons-wrapper">
+            <div className="schedule-card-buttons-wrapper">
               <button className="btn btn-rgis-red">CONFIRM</button>
               <button className="btn float-right btn-rgis-transparent text-red">REQUEST CHANGE</button>
             </div>
-            <div class="schedule-card-buttons-wrapper text-center">
+            <div className="schedule-card-buttons-wrapper text-center">
               <button className="btn btn-rgis-transparent text-yellow">PENDING REVIEW</button>
             </div>
           </div>
 
         </div>
-        <div className="col-10 schedule-card-status text-center available">
-          <span className="schedule-card-available-status">AVAILABLE:  </span>
-          <span className="schedule-card-available-interval">12:00 AM - 11:59 PM</span>
-        </div>
-        <div className="col-10 schedule-card-status text-center unavailable">
-          <span className="schedule-card-available-status">UNAVAILABLE</span>
+        <div className="col-10 offset-2 noPadding">
+          <div className="schedule-card-status text-center available">
+            <span className="schedule-card-available-status">AVAILABLE:  </span>
+            <span className="schedule-card-available-interval">12:00 AM - 11:59 PM</span>
+          </div>
+          <div className="schedule-card-status text-center unavailable">
+            <span className="schedule-card-available-status">UNAVAILABLE</span>
+          </div>
         </div>
       </div>
     );
