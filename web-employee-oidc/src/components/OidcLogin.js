@@ -110,7 +110,7 @@ export default class OidcLogin extends Component {
     const _this = this;
     mgr.getUser()
       .then(function (user) {
-        const url = `${API_URL}:5001/identity`;
+        const url = `${API_URL}:8080/secret`;
 
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url);
@@ -119,7 +119,8 @@ export default class OidcLogin extends Component {
             const status = xhr.status;
 
             if (status == 401) {
-              currentObject = `{ "message": "${xhr.statusText}", "status": "${xhr.status}"}`;
+              currentObject = `{ "message": "Unauthorized", "status": "${xhr.status}"}`;
+              console.log(xhr);
             }
             _this.setState({
               objectToBeautify: currentObject

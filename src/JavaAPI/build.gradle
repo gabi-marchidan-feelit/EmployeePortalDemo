@@ -29,6 +29,15 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-security")
     compile("org.springframework.security.oauth:spring-security-oauth2")
     compile("org.springframework.security:spring-security-jwt")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile 'org.apache.commons:commons-dbcp2:2.2.0'
+    compile("com.zaxxer:HikariCP:2.7.3")
+
+    runtime("org.springframework.boot:spring-boot-devtools")
+    runtime("com.h2database:h2")
+    //Oracle driver is not available in Maven Central
+    runtime files("./tools/libs/ojdbc7.jar")
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path')
 }

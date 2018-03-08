@@ -1,6 +1,6 @@
 package hello.controllers;
 
-import hello.models.InfoGetResponseModel;
+import hello.models.api.InfoGetResponseModel;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

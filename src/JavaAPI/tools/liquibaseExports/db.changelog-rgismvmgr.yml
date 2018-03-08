@@ -1,0 +1,1485 @@
+databaseChangeLog:
+- changeSet:
+    id: 1510777061274-1
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: STATEMENT_ID
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: PLAN_ID
+            type: NUMBER
+        - column:
+            name: TIMESTAMP
+            type: date
+        - column:
+            name: REMARKS
+            type: VARCHAR2(4000 BYTE)
+        - column:
+            name: OPERATION
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: OPTIONS
+            type: VARCHAR2(255 BYTE)
+        - column:
+            name: OBJECT_NODE
+            type: VARCHAR2(128 BYTE)
+        - column:
+            name: OBJECT_OWNER
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: OBJECT_NAME
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: OBJECT_ALIAS
+            type: VARCHAR2(65 BYTE)
+        - column:
+            name: OBJECT_INSTANCE
+            type: NUMBER(*, 0)
+        - column:
+            name: OBJECT_TYPE
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: OPTIMIZER
+            type: VARCHAR2(255 BYTE)
+        - column:
+            name: SEARCH_COLUMNS
+            type: NUMBER
+        - column:
+            name: ID
+            type: NUMBER(*, 0)
+        - column:
+            name: PARENT_ID
+            type: NUMBER(*, 0)
+        - column:
+            name: DEPTH
+            type: NUMBER(*, 0)
+        - column:
+            name: POSITION
+            type: NUMBER(*, 0)
+        - column:
+            name: COST
+            type: NUMBER(*, 0)
+        - column:
+            name: CARDINALITY
+            type: NUMBER(*, 0)
+        - column:
+            name: BYTES
+            type: NUMBER(*, 0)
+        - column:
+            name: OTHER_TAG
+            type: VARCHAR2(255 BYTE)
+        - column:
+            name: PARTITION_START
+            type: VARCHAR2(255 BYTE)
+        - column:
+            name: PARTITION_STOP
+            type: VARCHAR2(255 BYTE)
+        - column:
+            name: PARTITION_ID
+            type: NUMBER(*, 0)
+        - column:
+            name: OTHER
+            type: LONG
+        - column:
+            name: DISTRIBUTION
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: CPU_COST
+            type: NUMBER(*, 0)
+        - column:
+            name: IO_COST
+            type: NUMBER(*, 0)
+        - column:
+            name: TEMP_SPACE
+            type: NUMBER(*, 0)
+        - column:
+            name: ACCESS_PREDICATES
+            type: VARCHAR2(4000 BYTE)
+        - column:
+            name: FILTER_PREDICATES
+            type: VARCHAR2(4000 BYTE)
+        - column:
+            name: PROJECTION
+            type: VARCHAR2(4000 BYTE)
+        - column:
+            name: TIME
+            type: NUMBER(*, 0)
+        - column:
+            name: QBLOCK_NAME
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: OTHER_XML
+            type: CLOB
+        tableName: PLAN_TABLE
+- changeSet:
+    id: 1510777061274-2
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: OWNER
+            type: VARCHAR2(30 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: SYNONYM_NAME
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: TABLE_OWNER
+            type: VARCHAR2(30 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: TABLE_NAME
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: DB_LINK
+            type: VARCHAR2(128 BYTE)
+        tableName: RGIS_APPS_SYNONYMS
+- changeSet:
+    id: 1510777061274-3
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CUSTOMER_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: PERSON_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: NATIONAL_IDENTIFIER
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: APH_DOLLARS
+            type: NUMBER
+        - column:
+            name: APH_PIECES
+            type: NUMBER
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_EMP_APH_6MTHS_MV
+        tableName: RGIS_EMP_APH_6MTHS_MV
+- changeSet:
+    id: 1510777061274-4
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CUSTOMER_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: PERSON_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: NATIONAL_IDENTIFIER
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: APH_DOLLARS
+            type: NUMBER
+        - column:
+            name: APH_PIECES
+            type: NUMBER
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_EMP_APH_MV
+        tableName: RGIS_EMP_APH_MV
+- changeSet:
+    id: 1510777061274-5
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CURRENCY_CODE
+            type: VARCHAR2(15 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            constraints:
+              nullable: false
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: CREATION_DATE
+            type: date
+        - column:
+            constraints:
+              nullable: false
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: ENABLED_FLAG
+            type: VARCHAR2(1 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: CURRENCY_FLAG
+            type: VARCHAR2(1 BYTE)
+        - column:
+            name: DESCRIPTION
+            type: VARCHAR2(240 BYTE)
+        - column:
+            name: ISSUING_TERRITORY_CODE
+            type: VARCHAR2(2 BYTE)
+        - column:
+            name: PRECISION
+            type: NUMBER(1, 0)
+        - column:
+            name: EXTENDED_PRECISION
+            type: NUMBER(2, 0)
+        - column:
+            name: SYMBOL
+            type: VARCHAR2(12 BYTE)
+        - column:
+            name: START_DATE_ACTIVE
+            type: date
+        - column:
+            name: END_DATE_ACTIVE
+            type: date
+        - column:
+            name: MINIMUM_ACCOUNTABLE_UNIT
+            type: NUMBER
+        - column:
+            name: CONTEXT
+            type: VARCHAR2(80 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: ISO_FLAG
+            type: VARCHAR2(1 BYTE)
+        - column:
+            name: ATTRIBUTE1
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE2
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE3
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE4
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE5
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE6
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE7
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE8
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE9
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE10
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE11
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE12
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE13
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE14
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE15
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE_CATEGORY
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE1
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE2
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE3
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE4
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE5
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE6
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE7
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE8
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE9
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE10
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE11
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE12
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE13
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE14
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE15
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE16
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE17
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE18
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE19
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: GLOBAL_ATTRIBUTE20
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: DERIVE_EFFECTIVE
+            type: date
+        - column:
+            name: DERIVE_TYPE
+            type: VARCHAR2(8 BYTE)
+        - column:
+            name: DERIVE_FACTOR
+            type: NUMBER
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_FND_CURRENCIES_SN
+        tableName: RGIS_FND_CURRENCIES_SN
+- changeSet:
+    id: 1510777061274-6
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: USER_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: EMPLOYEE_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: EMAIL_ADDRESS
+            type: VARCHAR2(240 BYTE)
+        - column:
+            name: END_DATE
+            type: date
+        - column:
+            constraints:
+              nullable: false
+            name: CREATION_DATE
+            type: date
+        - column:
+            constraints:
+              nullable: false
+            name: LAST_UPDATE_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_FND_USER_SN
+        tableName: RGIS_FND_USER_SN
+- changeSet:
+    id: 1510777061274-7
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ORGANIZATION_ID
+            type: NUMBER(15, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: NAME
+            type: VARCHAR2(240 BYTE)
+        - column:
+            name: LOCATION_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATION_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_HR_ALL_ORG_UNITS_SN
+        tableName: RGIS_HR_ALL_ORG_UNITS_SN
+- changeSet:
+    id: 1510777061274-8
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: LOCATION_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: LOCATION_CODE
+            type: VARCHAR2(60 BYTE)
+        - column:
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATION_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_HR_LOCATIONS_ALL_SN
+        tableName: RGIS_HR_LOCATIONS_ALL_SN
+- changeSet:
+    id: 1510777061274-9
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: MASTER_TABLE
+            type: VARCHAR2(27 BYTE)
+        - column:
+            name: NUM_ROWS
+            type: NUMBER
+        - column:
+            name: UPD_DATE
+            type: date
+        tableName: RGIS_MVIEW_STAT
+- changeSet:
+    id: 1510777061274-10
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: MASTER_TABLE
+            type: VARCHAR2(27 BYTE)
+        - column:
+            name: NUM_ROWS
+            type: NUMBER
+        - column:
+            name: UPD_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_MVIEW_STAT_V_SN
+        tableName: RGIS_MVIEW_STAT_V_SN
+- changeSet:
+    id: 1510777061274-11
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PROVINCE_NAME
+            type: VARCHAR2(80 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: PROVICE_CODE
+            type: VARCHAR2(3 BYTE)
+        - column:
+            name: PROVINCE_ABBREV
+            type: VARCHAR2(5 BYTE)
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_PAY_CA_PROVINCES_V_SN
+        tableName: RGIS_PAY_CA_PROVINCES_V_SN
+- changeSet:
+    id: 1510777061274-12
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ASSIGNMENT_STATUS_TYPE_ID
+            type: NUMBER(9, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: USER_STATUS
+            type: VARCHAR2(80 BYTE)
+        - column:
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATION_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_PER_ASSIGN_STAT_TYPES_SN
+        tableName: RGIS_PER_ASSIGN_STAT_TYPES_SN
+- changeSet:
+    id: 1510777061274-13
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CONTRACT_ID
+            type: NUMBER(9, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: BUSINESS_GROUP_ID
+            type: NUMBER(15, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: EFFECTIVE_START_DATE
+            type: date
+        - column:
+            constraints:
+              nullable: false
+            name: EFFECTIVE_END_DATE
+            type: date
+        - column:
+            constraints:
+              nullable: false
+            name: PERSON_ID
+            type: NUMBER(9, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: OBJECT_VERSION_NUMBER
+            type: NUMBER(9, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: REFERENCE
+            type: VARCHAR2(80 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: TYPE
+            type: VARCHAR2(30 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: STATUS
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: STATUS_REASON
+            type: VARCHAR2(240 BYTE)
+        - column:
+            name: DOC_STATUS
+            type: VARCHAR2(240 BYTE)
+        - column:
+            name: DOC_STATUS_CHANGE_DATE
+            type: date
+        - column:
+            name: DESCRIPTION
+            type: VARCHAR2(2000 BYTE)
+        - column:
+            name: DURATION
+            type: NUMBER(22, 2)
+        - column:
+            name: DURATION_UNITS
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: CONTRACTUAL_JOB_TITLE
+            type: VARCHAR2(80 BYTE)
+        - column:
+            name: PARTIES
+            type: VARCHAR2(80 BYTE)
+        - column:
+            name: START_REASON
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: END_REASON
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: NUMBER_OF_EXTENSIONS
+            type: NUMBER(9, 0)
+        - column:
+            name: EXTENSION_REASON
+            type: VARCHAR2(80 BYTE)
+        - column:
+            name: EXTENSION_PERIOD
+            type: NUMBER(22, 2)
+        - column:
+            name: EXTENSION_PERIOD_UNITS
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: CTR_INFORMATION_CATEGORY
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: CTR_INFORMATION1
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION2
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION3
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION4
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION5
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION6
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION7
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION8
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION9
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION10
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION11
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION12
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION13
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION14
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION15
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION16
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION17
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION18
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION19
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: CTR_INFORMATION20
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE_CATEGORY
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: ATTRIBUTE1
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE2
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE3
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE4
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE5
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE6
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE7
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE8
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE9
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE10
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE11
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE12
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE13
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE14
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE15
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE16
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE17
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE18
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE19
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: ATTRIBUTE20
+            type: VARCHAR2(150 BYTE)
+        - column:
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATION_DATE
+            type: date
+        - column:
+            name: UPDSEQ
+            type: NUMBER(14, 0)
+        tableName: RGIS_PER_CONTRACTS_F
+- changeSet:
+    id: 1510777061274-14
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PAY_BASIS_ID
+            type: NUMBER(9, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: NAME
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATION_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_PER_PAY_BASES_SN
+        tableName: RGIS_PER_PAY_BASES_SN
+- changeSet:
+    id: 1510777061274-15
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PAY_PROPOSAL_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: PROPOSED_SALARY_N
+            type: NUMBER
+        - column:
+            constraints:
+              nullable: false
+            name: ASSIGNMENT_ID
+            type: NUMBER(10, 0)
+        - column:
+            name: CHANGE_DATE
+            type: date
+        - column:
+            name: APPROVED
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATION_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_PER_PAY_PROPOSALS_SN
+        tableName: RGIS_PER_PAY_PROPOSALS_SN
+- changeSet:
+    id: 1510777061274-16
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PERSON_TYPE_ID
+            type: NUMBER(15, 0)
+        - column:
+            constraints:
+              nullable: false
+            name: SYSTEM_PERSON_TYPE
+            type: VARCHAR2(30 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: USER_PERSON_TYPE
+            type: VARCHAR2(80 BYTE)
+        - column:
+            name: LAST_UPDATE_DATE
+            type: date
+        - column:
+            name: LAST_UPDATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: LAST_UPDATE_LOGIN
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATED_BY
+            type: NUMBER(15, 0)
+        - column:
+            name: CREATION_DATE
+            type: date
+        remarks: snapshot table for snapshot RGISMVMGR.RGIS_PER_PERSON_TYPES_SN
+        tableName: RGIS_PER_PERSON_TYPES_SN
+- changeSet:
+    id: 1510777061274-17
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: SNAME
+            type: VARCHAR2(40 BYTE)
+        - column:
+            name: MASTER_TAB
+            type: VARCHAR2(100 BYTE)
+        - column:
+            name: TEXT
+            type: VARCHAR2(4000 BYTE)
+        - column:
+            name: INSTALLED
+            type: VARCHAR2(1 BYTE)
+        - column:
+            name: SYNONYM_NAME
+            type: VARCHAR2(240 BYTE)
+        - column:
+            name: SYN_OWNER
+            type: VARCHAR2(30 BYTE)
+        - column:
+            name: COMMENTS
+            type: VARCHAR2(520 BYTE)
+        - column:
+            name: FREQUENCY
+            type: VARCHAR2(10 BYTE)
+        - column:
+            name: MV_SITE
+            remarks: DB name where MV is located
+            type: VARCHAR2(40 BYTE)
+        - column:
+            name: BASE_SITE
+            remarks: Base table Location
+            type: VARCHAR2(40 BYTE)
+        - column:
+            name: RFRESH_TYPE
+            remarks: Refresh type [ complete, fast, force ]
+            type: VARCHAR2(10 BYTE)
+        - column:
+            name: MVLOG
+            remarks: Indicates if base table has materialized log for fast refresh Y or N
+            type: CHAR(1 CHAR)
+        tableName: RGIS_SNAPSHOTS
+- changeSet:
+    id: 1510777061274-18
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: POSTAL_CODE
+            type: VARCHAR2(15 BYTE)
+        - column:
+            name: DISTRICT_NUM
+            type: NUMBER(*, 0)
+        - column:
+            name: STARTING_WAGE
+            type: NUMBER(*, 2)
+        - column:
+            name: HR_ORGANIZATION_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: BUSINESS_GROUP_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: CITY
+            type: VARCHAR2(60 BYTE)
+        - column:
+            name: STATE
+            type: VARCHAR2(60 BYTE)
+        - column:
+            name: COUNTRY
+            type: VARCHAR2(80 BYTE)
+        - column:
+            name: TERRITORY_CODE
+            type: VARCHAR2(2 BYTE)
+        tableName: RGIS_WEB_ZIP_TO_DIST_MAP
+- changeSet:
+    id: 1510777061274-19
+    author: timw (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: POSTAL_CODE
+            type: VARCHAR2(15 BYTE)
+        - column:
+            name: DISTRICT_NUM
+            type: NUMBER(*, 0)
+        - column:
+            name: STARTING_WAGE
+            type: NUMBER(*, 0)
+        - column:
+            name: HR_ORGANIZATION_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: BUSINESS_GROUP_ID
+            type: NUMBER(15, 0)
+        - column:
+            name: CITY
+            type: VARCHAR2(60 BYTE)
+        - column:
+            name: STATE
+            type: VARCHAR2(60 BYTE)
+        - column:
+            name: COUNTRY
+            type: VARCHAR2(80 BYTE)
+        - column:
+            name: TERRITORY_CODE
+            type: VARCHAR2(2 BYTE)
+        tableName: RWZTDM_070420
+- changeSet:
+    id: 1510777061274-20
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: LOCATION_ID
+        indexName: HR_LOCATIONS_PK
+        tableName: RGIS_HR_LOCATIONS_ALL_SN
+        unique: true
+    - addPrimaryKey:
+        columnNames: LOCATION_ID
+        constraintName: HR_LOCATIONS_PK
+        forIndexName: HR_LOCATIONS_PK
+        tableName: RGIS_HR_LOCATIONS_ALL_SN
+- changeSet:
+    id: 1510777061274-21
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: ORGANIZATION_ID
+        indexName: HR_ORGANIZATION_UNITS_PK
+        tableName: RGIS_HR_ALL_ORG_UNITS_SN
+        unique: true
+    - addPrimaryKey:
+        columnNames: ORGANIZATION_ID
+        constraintName: HR_ORGANIZATION_UNITS_PK
+        forIndexName: HR_ORGANIZATION_UNITS_PK
+        tableName: RGIS_HR_ALL_ORG_UNITS_SN
+- changeSet:
+    id: 1510777061274-22
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: ASSIGNMENT_STATUS_TYPE_ID
+        indexName: PER_ASSIGNMENT_STATUS_TYPE_PK
+        tableName: RGIS_PER_ASSIGN_STAT_TYPES_SN
+        unique: true
+    - addPrimaryKey:
+        columnNames: ASSIGNMENT_STATUS_TYPE_ID
+        constraintName: PER_ASSIGNMENT_STATUS_TYPE_PK
+        forIndexName: PER_ASSIGNMENT_STATUS_TYPE_PK
+        tableName: RGIS_PER_ASSIGN_STAT_TYPES_SN
+- changeSet:
+    id: 1510777061274-23
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PAY_BASIS_ID
+        indexName: PER_PAY_BASES_PK
+        tableName: RGIS_PER_PAY_BASES_SN
+        unique: true
+    - addPrimaryKey:
+        columnNames: PAY_BASIS_ID
+        constraintName: PER_PAY_BASES_PK
+        forIndexName: PER_PAY_BASES_PK
+        tableName: RGIS_PER_PAY_BASES_SN
+- changeSet:
+    id: 1510777061274-24
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PAY_PROPOSAL_ID
+        indexName: PER_PAY_PROPOSALS_PK
+        tableName: RGIS_PER_PAY_PROPOSALS_SN
+        unique: true
+    - addPrimaryKey:
+        columnNames: PAY_PROPOSAL_ID
+        constraintName: PER_PAY_PROPOSALS_PK
+        forIndexName: PER_PAY_PROPOSALS_PK
+        tableName: RGIS_PER_PAY_PROPOSALS_SN
+- changeSet:
+    id: 1510777061274-25
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PERSON_TYPE_ID
+        indexName: PER_PERSON_TYPES_PK
+        tableName: RGIS_PER_PERSON_TYPES_SN
+        unique: true
+    - addPrimaryKey:
+        columnNames: PERSON_TYPE_ID
+        constraintName: PER_PERSON_TYPES_PK
+        forIndexName: PER_PERSON_TYPES_PK
+        tableName: RGIS_PER_PERSON_TYPES_SN
+- changeSet:
+    id: 1510777061274-26
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: CONTRACT_ID
+        - column:
+            name: EFFECTIVE_START_DATE
+        - column:
+            name: EFFECTIVE_END_DATE
+        indexName: RGIS_PER_CONTRACTS_F_PK
+        tableName: RGIS_PER_CONTRACTS_F
+        unique: true
+    - addPrimaryKey:
+        columnNames: CONTRACT_ID, EFFECTIVE_START_DATE, EFFECTIVE_END_DATE
+        constraintName: RGIS_PER_CONTRACTS_F_PK
+        forIndexName: RGIS_PER_CONTRACTS_F_PK
+        tableName: RGIS_PER_CONTRACTS_F
+- changeSet:
+    id: 1510777061274-27
+    author: timw (generated)
+    changes:
+    - createIndex:
+        indexName: I_SNAP$_RGIS_FND_CURRENCIE
+        tableName: RGIS_FND_CURRENCIES_SN
+        unique: true
+- changeSet:
+    id: 1510777061274-28
+    author: timw (generated)
+    changes:
+    - createIndex:
+        indexName: I_SNAP$_RGIS_FND_USER_SN
+        tableName: RGIS_FND_USER_SN
+        unique: true
+- changeSet:
+    id: 1510777061274-29
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PERSON_ID
+        - column:
+            name: CUSTOMER_ID
+        indexName: RGIS_EMP_APH_6MTHS_MV_N1
+        tableName: RGIS_EMP_APH_6MTHS_MV
+- changeSet:
+    id: 1510777061274-30
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PERSON_ID
+        - column:
+            name: CUSTOMER_ID
+        indexName: RGIS_EMP_APH_MV_N1
+        tableName: RGIS_EMP_APH_MV
+- changeSet:
+    id: 1510777061274-31
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: DERIVE_TYPE
+        indexName: RGIS_FND_CURRENCIES_SN_N1
+        tableName: RGIS_FND_CURRENCIES_SN
+- changeSet:
+    id: 1510777061274-32
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: CURRENCY_CODE
+        indexName: RGIS_FND_CURRENCIES_SN_U1
+        tableName: RGIS_FND_CURRENCIES_SN
+- changeSet:
+    id: 1510777061274-33
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: EMPLOYEE_ID
+        indexName: RGIS_FND_USER_SN_I1
+        tableName: RGIS_FND_USER_SN
+- changeSet:
+    id: 1510777061274-34
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: USER_ID
+        indexName: RGIS_FND_USER_SN_UI1
+        tableName: RGIS_FND_USER_SN
+        unique: true
+- changeSet:
+    id: 1510777061274-35
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PAY_BASIS_ID
+        - column:
+            name: NAME
+        indexName: RGIS_PER_PAY_BASES_SN_N1
+        tableName: RGIS_PER_PAY_BASES_SN
+- changeSet:
+    id: 1510777061274-36
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: ASSIGNMENT_ID
+        indexName: RGIS_PER_PAY_PROPOSALS_SN_I1
+        tableName: RGIS_PER_PAY_PROPOSALS_SN
+- changeSet:
+    id: 1510777061274-37
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: ASSIGNMENT_ID
+        - column:
+            name: CHANGE_DATE
+        indexName: RGIS_PER_PAY_PROPOSALS_SN_I2
+        tableName: RGIS_PER_PAY_PROPOSALS_SN
+- changeSet:
+    id: 1510777061274-38
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: ASSIGNMENT_ID
+        - column:
+            name: PAY_PROPOSAL_ID
+        indexName: RGIS_PER_PAY_PROPOSALS_SN_N1
+        tableName: RGIS_PER_PAY_PROPOSALS_SN
+- changeSet:
+    id: 1510777061274-39
+    author: timw (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PERSON_TYPE_ID
+        - column:
+            name: SYSTEM_PERSON_TYPE
+        indexName: RGIS_PER_PERSON_TYPES_SN_N1
+        tableName: RGIS_PER_PERSON_TYPES_SN
+- changeSet:
+    id: 1510777061274-40
+    author: timw (generated)
+    changes:
+    - createView:
+        fullDefinition: true
+        selectQuery: |-
+          CREATE OR REPLACE FORCE VIEW RGIS_DASHBOARD_V1 (ORG_TYPE, YEARQTR, ORGANIZATION_ID, ORGANIZATION_NUMBER, PIQA_PERFORMANCE, PIQA_RANK, SERVICE_OPP_PCT, SERVICE_OPP_RANK, TOTAL_OPIT, TOTAL_OPIT_RANK_N, OPIT_PCT, OPIT_PCT_RANK_N, OPIT_PCT_INCR, OPIT_PCT_INCR_RANK_N) AS SELECT
+                     org_type,
+                     yearqtr,
+                     organization_id,
+                     organization_number,
+                     max( piqa_performance) piqa_performance,
+                     max( piqa_rank) piqa_rank,
+                     max( service_opp_pct) service_opp_pct,
+                     max( service_opp_rank) service_opp_rank,
+                     max( opit) total_opit,
+                     max( opit_rank_n) total_opit_rank_n,
+                     max( opit_pct) opit_pct,
+                     max( opit_pct_rank_n) opit_pct_rank_n,
+                     max( opit_pct_incr) opit_pct_incr,
+                     max( opit_pct_incr_rank_n) opit_pct_incr_rank_n
+          FROM
+          ( select decode(rdpm.org_type, null, decode(rdom.org_type, null, rdso.org_type, rdom.org_type),
+                       rdpm.org_type) org_type,
+                             decode(rdpm.yearqtr, null, decode(rdom.yearqtr, null, rdso.yearqtr, rdom.yearqtr),
+                             rdpm.yearqtr) yearqtr,
+                             decode(rdpm.organization_id, null, decode(rdom.organization_id, null, rdso.organization_id,
+                                           rdom.organization_id), rdpm.organization_id) organization_id,
+                             decode(rdpm.organization_number, null, decode(rdom.organization_number, null,
+                               rdso.organization_number, rdom.organization_number), rdpm.organization_number) organization_number,
+                             rdpm.avg_performance piqa_performance,
+                             rdpm.piqa_rank_n piqa_rank,
+                             NVL(rdso.service_opp_pct,0) service_opp_pct,
+                             NVL(rdso.SVR_OPP_RANK_N,1) service_opp_rank,
+                             rdom.opit opit,
+                             rdom.opit_rank_n opit_rank_n,
+                             rdom.opit_pct opit_pct,
+                             rdom.opit_pct_rank_n opit_pct_rank_n,
+                             rdom.opit_pct_incr opit_pct_incr,
+                             rdom.opit_pct_incr_rank_n opit_pct_incr_rank_n
+                       from rgismvmgr.rgis_db_piqa_mv rdpm,
+                            rgismvmgr.rgis_db_all_opit_mv rdom,
+                            rgismvmgr.rgis_db_service_opp_mv rdso
+                     where  rdpm.org_type = rdom.org_type(+)
+                      AND rdpm.yearqtr = rdom.yearqtr(+)
+                      AND rdpm.organization_id = rdom.organization_id(+)
+                      AND rdom.org_type = rdso.org_type(+)
+                      AND rdom.yearqtr = rdso.yearqtr(+)
+                      AND rdom.organization_id = rdso.organization_id(+)
+                      AND rdom.org_type NOT IN ('DISWM', 'DISHD')
+          UNION
+          select    decode(rdom.org_type,null, decode(rdso.org_type, null,
+                    rdpm.org_type, rdso.org_type), rdom.org_type) org_type,
+                    decode(rdom.yearqtr,null, rdso.yearqtr,rdom.yearqtr) yearqtr,
+                    decode(rdom.organization_id, null, rdso.organization_id,rdom.organization_id) organization_id,
+                         decode(rdom.organization_number,null, rdso.organization_number,
+                    rdom.organization_number) organization_number,
+                          rdpm.avg_performance piqa_performance,
+                          rdpm.piqa_rank_n piqa_rank,
+                          NVL(rdso.service_opp_pct,0) service_opp_pct,
+                          NVL(rdso.SVR_OPP_RANK_N,1) service_opp_rank,
+                          rdom.opit opit,
+                          rdom.opit_rank_n opit_rank_n,
+                          rdom.opit_pct opit_pct,
+                          rdom.opit_pct_rank_n opit_pct_rank_n,
+                          rdom.opit_pct_incr opit_pct_incr,
+                          rdom.opit_pct_incr_rank_n opit_pct_incr_rank_n
+                    from rgismvmgr.rgis_db_piqa_mv rdpm,
+                         rgismvmgr.rgis_db_all_opit_mv rdom,
+                         rgismvmgr.rgis_db_service_opp_mv rdso
+                  where  rdpm.org_type (+)= rdom.org_type
+                   AND rdpm.yearqtr (+)= rdom.yearqtr
+                   AND rdpm.organization_id (+)= rdom.organization_id
+                   AND rdom.org_type (+)= rdso.org_type
+                   AND rdom.yearqtr (+)= rdso.yearqtr
+                   AND rdom.organization_id (+)= rdso.organization_id
+                   AND rdom.org_type NOT IN ('DISWM', 'DISHD')
+          UNION
+          select NVL(rdpm.org_type, rdom.org_type) org_type,
+                 NVL(rdpm.yearqtr, rdom.yearqtr) yearqtr,
+                 NVL(rdpm.organization_id, rdom.organization_id) organization_id,
+                 NVL(rdpm.organization_number, rdom.organization_number) organization_number,
+                 NVL(rdpm.avg_performance, 100) piqa_performance,
+                 NVL(rdpm.piqa_rank_n, 1) piqa_rank,
+                 0 service_opp_pct,
+                 1 service_opp_rank,
+                 rdom.opit opit,
+                 rdom.opit_rank_n opit_rank_n,
+                 rdom.opit_pct opit_pct,
+                 rdom.opit_pct_rank_n opit_pct_rank_n,
+                 rdom.opit_pct_incr opit_pct_incr,
+                 rdom.opit_pct_incr_rank_n opit_pct_incr_rank_n
+            from rgismvmgr.rgis_db_wm_piqa_mv rdpm,
+                 rgismvmgr.rgis_db_all_opit_mv rdom
+           where  rdpm.org_type (+)= rdom.org_type
+             AND rdpm.organization_id (+)= rdom.organization_id
+             AND rdom.yearqtr  = rdpm.yearqtr(+)
+             AND rdom.org_type ='DISWM'
+          UNION
+          select NVL(rdom.org_type, rdpm.org_type) org_type,
+                 NVL(rdom.yearqtr, rdpm.yearqtr) yearqtr,
+                 NVL(rdom.organization_id, rdpm.organization_id) organization_id,
+                 NVL(rdom.organization_number, rdpm.organization_number) organization_number,
+                 NVL(rdpm.avg_performance, 100) piqa_performance,
+                 NVL(rdpm.piqa_rank_n,1) piqa_rank,
+                 0 service_opp_pct,
+                 1 service_opp_rank,
+                 rdom.opit opit,
+                 rdom.opit_rank_n opit_rank_n,
+                 rdom.opit_pct opit_pct,
+                 rdom.opit_pct_rank_n opit_pct_rank_n,
+                 rdom.opit_pct_incr opit_pct_incr,
+                 rdom.opit_pct_incr_rank_n opit_pct_incr_rank_n
+           from rgismvmgr.rgis_db_wm_piqa_mv rdpm,
+                rgismvmgr.rgis_db_all_opit_mv rdom
+          where  rdpm.org_type = rdom.org_type(+)
+            AND rdpm.organization_id = rdom.organization_id(+)
+            AND rdom.yearqtr (+) = rdpm.yearqtr
+            AND rdpm.org_type ='DISWM'
+          UNION
+          select NVL(rdpm.org_type, rdom.org_type) org_type,
+                 NVL(rdpm.yearqtr, rdom.yearqtr) yearqtr,
+                 NVL(rdpm.organization_id, rdom.organization_id) organization_id,
+                 NVL(rdpm.organization_number, rdom.organization_number) organization_number,
+                 NVL(rdpm.avg_performance, 100) piqa_performance,
+                 NVL(rdpm.piqa_rank_n,1) piqa_rank,
+                 0 service_opp_pct,
+                 1 service_opp_rank,
+                 rdom.opit opit,
+                 rdom.opit_rank_n opit_rank_n,
+                 rdom.opit_pct opit_pct,
+                 rdom.opit_pct_rank_n opit_pct_rank_n,
+                 rdom.opit_pct_incr opit_pct_incr,
+                 rdom.opit_pct_incr_rank_n opit_pct_incr_rank_n
+            from rgismvmgr.rgis_db_hd_sccard_mv rdpm,
+                 rgismvmgr.rgis_db_all_opit_mv rdom
+           where  rdpm.org_type (+)= rdom.org_type
+             AND rdpm.organization_id (+)= rdom.organization_id
+             AND rdom.yearqtr  = rdpm.yearqtr(+)
+             AND rdom.org_type ='DISHD'
+          UNION
+          select NVL(rdom.org_type, rdpm.org_type) org_type,
+                 NVL(rdom.yearqtr, rdpm.yearqtr) yearqtr,
+                 NVL(rdom.organization_id, rdpm.organization_id) organization_id,
+                 NVL(rdom.organization_number, rdpm.organization_number) organization_number,
+                 NVL(rdpm.avg_performance, 100) piqa_performance,
+                 NVL(rdpm.piqa_rank_n, 1) piqa_rank,
+                 0 service_opp_pct,
+                 1 service_opp_rank,
+                 rdom.opit opit,
+                 rdom.opit_rank_n opit_rank_n,
+                 rdom.opit_pct opit_pct,
+                 rdom.opit_pct_rank_n opit_pct_rank_n,
+                 rdom.opit_pct_incr opit_pct_incr,
+                 rdom.opit_pct_incr_rank_n opit_pct_incr_rank_n
+           from rgismvmgr.rgis_db_hd_sccard_mv rdpm,
+                rgismvmgr.rgis_db_all_opit_mv rdom
+          where  rdpm.org_type = rdom.org_type(+)
+            AND rdpm.organization_id = rdom.organization_id(+)
+            AND rdom.yearqtr (+) = rdpm.yearqtr
+            AND rdpm.org_type ='DISHD')
+          group by org_type,
+                   yearqtr,
+                   organization_id,
+                   organization_number
+        viewName: RGIS_DASHBOARD_V1
+- changeSet:
+    id: 1510777061274-41
+    author: timw (generated)
+    changes:
+    - createView:
+        fullDefinition: true
+        selectQuery: |-
+          CREATE OR REPLACE FORCE VIEW RGIS_PO_VENDORS_V (VENDOR_ID, VENDOR_NAME, VENDOR_NUMBER, VENDOR_SITE_ID, VENDOR_SITE_NAME, BUSINESS_GROUP_ID) AS SELECT pv.vendor_id             vendor_id,
+                 pv.vendor_name           vendor_name,
+                 pv.segment1              vendor_number,
+                 pvs.vendor_site_id       vendor_site_id,
+                 pvs.vendor_site_code     vendor_site_name,
+                 pvs.org_id               business_group_id
+          FROM   po_vendors_mv             pv,
+                 po_vendor_sites_all_mv    pvs
+          WHERE  pv.vendor_id = pvs.vendor_id
+            AND  pvs.pay_group_lookup_code = 'SUBLER'
+            AND (pvs.inactive_date IS NULL OR pvs.inactive_date > SYSDATE)
+        viewName: RGIS_PO_VENDORS_V
+

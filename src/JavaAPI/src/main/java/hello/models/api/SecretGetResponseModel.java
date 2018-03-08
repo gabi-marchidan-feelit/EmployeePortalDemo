@@ -1,4 +1,4 @@
-package hello.models;
+package hello.models.api;
 
 public class SecretGetResponseModel {
     private final String secretMessage;
