@@ -16,7 +16,8 @@ export default class Datepicker extends Component {
   }
 
   handleChange(date) {
-    const nextWeek = moment(moment(date).add(7, "days").calendar()).format('DD');
+    // const nextWeek = moment(moment(date).add(7, "days").calendar()).format('DD');
+    const nextWeek = moment(date).add(7, "days").format('DD');
     this.setState({
       startDate: date,
       nextWeek
@@ -47,9 +48,9 @@ export default class Datepicker extends Component {
     return (
       <div className="datepicker-wrapper">
         <div className="datepicker-center">
-          <span onClick={this.handlePrevMonth}>
+          <div onClick={this.handlePrevMonth}>
             <i className="fas datepicker-icon fa-caret-left" />
-          </span>
+          </div>
           <i className="fas datepicker-icon fa-calendar-alt" />
           <div className="datepicker-calendar">
             <DatePicker
@@ -60,15 +61,12 @@ export default class Datepicker extends Component {
               dateFormat="MMM. DD"
               onChangeRaw={(event) =>
                 this.handleChangeRaw(event.target.value)}
-              withPortal 
-              minDate={moment()}
-              maxDate={moment().add(12, "months")}
-              showDisabledMonthNavigation />
+              withPortal />
           </div>
           <div className="datepicker-next-month"> - {nextWeek}</div>  
-          <span onClick={this.handleNextMonth}>
+          <div onClick={this.handleNextMonth}>
            <i className="fas datepicker-icon fa-caret-right"/>
-          </span>
+          </div>
         </div>
       </div>
     );
