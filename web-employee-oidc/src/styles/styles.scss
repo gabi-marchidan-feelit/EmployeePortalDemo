@@ -14,6 +14,7 @@ body {
   font-smoothing: antialiased;
   font-weight: 300;
   color: #414042;
+  background: #f5f5f5;
 }
 
 .modal-content{
@@ -25,7 +26,27 @@ body {
   .modal-heading h2{
     color:#ffffff;
   }
-
+.noPadding {
+  padding: 0 !important;
+}
+.displayNone {
+  display: none !important;
+}
+/*UTILS*/
+.btn-rgis-red {
+  background: #8E002E;
+  color:#fff;
+}
+.btn-rgis-transparent {
+  background: transparent;
+}
+.text-red {
+  color:#8F012F;
+}
+.text-yellow {
+  color:#F3A147;
+}
+/*END UTILS*/
 /*LOGIN FORM*/
 .logo {
   width: 100px;
@@ -51,7 +72,7 @@ body {
   background: transparent;
   border: none;
   border-bottom: 1px solid #999999;
-  border-radius: 0;  
+  border-radius: 0;
 }
 
 .login-form input {
@@ -178,6 +199,7 @@ button:focus {
   text-align: center;
   padding: 10px 0;
   box-shadow: 0 4px 2px -2px lightgrey;
+  background: #fff;
 }
 .datepicker-center {
   width: 170px;
@@ -254,5 +276,75 @@ button:focus {
   font-weight: bold;
   margin-top: 20px;
   float: right;
+}
+.schedule-content .schedule-content-card {
+  margin-bottom: 20px;
+}
+.schedule-content .schedule-card {
+  box-shadow: 0 0 2px 1px #d8d8d8;
+}
+.schedule-content .schedule-card-today > div {
+  color: #980235;
+  font-weight: bold;
+}
+.schedule-content .schedule-card-date > div.schedule-card-date-day {
+  font-size:25px;
+  line-height:25px;
+}
+.schedule-content .schedule-card-info.schedule-card-active-blue {
+  background: #255B77;
+}
+.schedule-content .schedule-card-info.schedule-card-active-yellow {
+  background: #F29735;
+}
+.schedule-content .schedule-card-info.schedule-card-active-green {
+  background: #47885A;
+}
+.schedule-content .schedule-card-info {
+  padding: 20px 20px 10px;
+  color: #fff;
+  position: relative;
+}
+.schedule-content .schedule-card-info:after {
+  content: ">";
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  font-size:20px;
+  transform: translateY(-12px);
+}
+.schedule-content .schedule-card-info .schedule-card-info-title {
+  font-weight:bold;
+  font-size:18px;
+  line-height:18px;
+  margin-bottom:10px;
+}
+.schedule-content .schedule-card-info .schedule-card-info-address {
+  font-size:14px;
+}
+.schedule-content .schedule-card-details {
+  padding: 15px;
+  background: #fff;
+}
+.schedule-content .schedule-card-details .schedule-card-buttons-wrapper {
+  margin-top: 20px;
+}
+.schedule-content .schedule-card-details .schedule-card-buttons-wrapper button {
+  font-weight:bold;
+}
+.schedule-content .schedule-card-status {
+  padding:15px 0;
+}
+.schedule-content .schedule-card-status * {
+  color:#fff;
+}
+.schedule-content .schedule-card-status.available {
+  background: #5FA3A1;
+}
+.schedule-content .schedule-card-status.unavailable {
+  background: #8E002E;
+}
+.schedule-content .schedule-card-status .schedule-card-available-status {
+  font-weight:bold;
 }
 // END SCHEDULE CONTENT

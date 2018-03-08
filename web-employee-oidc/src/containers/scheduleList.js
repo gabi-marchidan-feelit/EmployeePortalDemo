@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import Navigation from '../components/utils/navigation';
 import Datepicker from '../components/utils/datepicker';
+import ScheduleItem from '../components/ScheduleItem';
 
 export default class ScheduleList extends Component {
-	render() {
+  render() {
     return(
       <div>
         <div className="row">
@@ -17,9 +18,7 @@ export default class ScheduleList extends Component {
               <button type="button" className="btn schedule-confirm-week-button">CONFIRM WEEK</button>
             </div>
           </div>
-          <div className="row">
-            
-          </div>
+          <ScheduleItem />
         </div>
       </div>
     );
