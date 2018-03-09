@@ -120,7 +120,7 @@ export default class OidcLogin extends Component {
 
             if (status == 401) {
               currentObject = `{ "message": "Unauthorized", "status": "${xhr.status}"}`;
-              console.log(xhr);
+              // console.log(xhr);
             }
             _this.setState({
               objectToBeautify: currentObject
