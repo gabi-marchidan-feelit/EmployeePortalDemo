@@ -162,27 +162,68 @@ button:focus {
   background: $rgis-red;
   padding: 0;
 }
-
 .navbar img.logo {
   width: 100px;
 }
-
 .navbar-nav {
-  margin-top: 15px;
+  width: 85%;
+  background: #fff;
+  height: 100%;
+  z-index: 1060;
 }
-
+.navbar .collapse.show {
+  left:0;
+  transition: 0.4s left linear;
+}
+.collapse {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  z-index: 10;
+  top:0;
+  width: 100%;
+  left:-100%;
+  transition: 0.3s left linear;
+  background: transparent;
+}
+.collapse .navbar-nav .navbar-backdrop {
+  display: none;
+  background: rgba(10,10,10,0.4);
+  position: fixed;
+  z-index:-1;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+}
+.collapse.show .navbar-nav .navbar-backdrop {
+  display: block
+}
+.navbar .navbar-nav .navbar-nav-info {
+  color: #fff;
+  background: #990033;
+  padding: 0 15px 30px;
+}
+.navbar .navbar-nav .navbar-nav-info .row:first-child {
+  display: block;
+  min-height: 65px;
+}
+.navbar .navbar-nav .navbar-nav-info .row:first-child button {
+  float: right;
+}
+.navbar .navbar-nav .navbar-nav-info .navbar-nav-info-title {
+  font-size: 20px;
+  margin-bottom:5px;
+}
+.navbar .navbar-nav .navbar-nav-info .navbar-nav-info-phone {
+  margin-bottom:10px;
+}
 @media (min-width: 992px){
   .navbar-toggleable-md .navbar-collapse {
       width: auto;
   }
   .navbar-brand {
     float: left;
-  }
-}
-
-@media (max-width: 992px){
-  .navbar-nav {
-    padding-left: 15px;
   }
 }
 // END NAVIGATION
@@ -255,14 +296,6 @@ button:focus {
 
 .react-datepicker {
   font-family: 'Raleway', sans-serif;
-}
-.collapse.show {
-  display: block;
-  position: absolute;
-  height: 200px;
-  background: $rgis-red;
-  width: 100%;
-  z-index: 10;
 }
 .react-datepicker-popper {
   transform: translate3d(85px, 100px, 0px) !important;

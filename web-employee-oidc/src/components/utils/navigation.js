@@ -31,10 +31,23 @@ export default class Navigation extends Component {
         </a>
         <div className={`collapse navbar-collapse ${mobileCollapse}`} id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
-            <a className="nav-item nav-link" href="#">Features</a>
-            <a className="nav-item nav-link" href="#">Pricing</a>
-            <a className="nav-item nav-link disabled" href="#">Disabled</a>
+            <div className="navbar-nav-info">
+              <div className="row">
+                <button className="navbar-toggler" onClick={this.handleMobileMenuChange} type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon" />
+                </button>
+              </div>
+              <div className="row">
+                <div className="navbar-nav-info-title semiBoldText col-12">Cora Lee</div>
+                <div className="col-12">emerson.borer@gmail.com</div>
+                <div className="col-12 navbar-nav-info-phone">(123) 555-1234</div>
+                <div className="col-12"><span className="semiBoldText">Badge #: </span>101010101</div>
+                <div className="col-12"><span className="semiBoldText">District #: </span>74</div>
+              </div>
+            </div>
+
+            <div class="navbar-backdrop">
+            </div>
           </div>
         </div>
       </nav>
