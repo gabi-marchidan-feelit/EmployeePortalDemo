@@ -6,7 +6,7 @@ export default class EventDetails extends Component {
     this.handleModalClose = this.handleModalClose.bind(this);
   }
   handleModalClose() {
-
+    this.props.modalCloseCallBack();
   }
   render() {
     return(

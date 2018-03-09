@@ -8,6 +8,7 @@ export default class ScheduleItem extends Component {
       showModal: 'false'
     };
     this.handleModalOpen = this.handleModalOpen.bind(this);
+    this.modalCloseFromChild = this.modalCloseFromChild.bind(this);
     this.modalState = false;
   }
 
@@ -16,6 +17,11 @@ export default class ScheduleItem extends Component {
     const {showModal} = this.state;
     this.setState({
       showModal: showModal === 'false' ? 'true' : 'false'
+    });
+  }
+  modalCloseFromChild() {
+    this.setState({
+      showModal: 'false'
     });
   }
   render() {
@@ -71,7 +77,7 @@ export default class ScheduleItem extends Component {
             <span className="schedule-card-available-status">UNAVAILABLE</span>
           </div>
         </div>
-        <EventDetails showModal={showModal}/>
+        <EventDetails showModal={showModal} modalCloseCallBack={this.modalCloseFromChild}/>
       </div>
     );
   }
