@@ -45,6 +45,24 @@ export default class Navigation extends Component {
                 <div className="col-12"><span className="semiBoldText">District #: </span>74</div>
               </div>
             </div>
+            <div className="navbar-nav-buttons">
+              <div>
+                <div className="col-12"><i className="fas fa-calendar-alt"/> My Schedule</div>
+              </div>
+              <div>
+                <div className="col-12"><i className="far fa-calendar-alt"/> General Availability</div>
+              </div>
+              <div>
+                <div className="col-12"><i className="fas fa-dollar-sign"/> Pay Stubs (External)</div>
+              </div>
+              <div className="separator"/>
+              <div>
+                <div className="col-12">Terms & Conditions</div>
+              </div>
+              <div>
+                <div className="col-12">Logout</div>
+              </div>
+            </div>
 
             <div class="navbar-backdrop">
             </div>
