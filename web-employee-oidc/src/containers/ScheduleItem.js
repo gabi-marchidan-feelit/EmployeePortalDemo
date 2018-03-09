@@ -4,14 +4,23 @@ import EventDetails from './eventDetails';
 export default class ScheduleItem extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showModal: 'false'
+    };
     this.handleModalOpen = this.handleModalOpen.bind(this);
     this.modalState = false;
   }
 
-  handleModalOpen() {
-    return true;
+  handleModalOpen(e) {
+    e.preventDefault();
+    const {showModal} = this.state;
+    console.log('here we go');
+    this.setState({
+      showModal: showModal === 'false' ? 'true' : 'false'
+    });
   }
   render() {
+    const {showModal} = this.state;
     return(
       <div className="row schedule-content-card">
         <div className="col schedule-card-date schedule-card-today">
@@ -25,7 +34,7 @@ export default class ScheduleItem extends Component {
         <div className="col-10 schedule-card noPadding">
           <div className="schedule-card-info schedule-card-active-blue" onClick={this.handleModalOpen}>
             <div className="schedule-card-info-title">
-              PetCo AQ1
+              PetCo AQ1 {showModal}
             </div>
             <div className="schedule-card-info-address">
               9237 Jerrold Freeway
@@ -63,7 +72,7 @@ export default class ScheduleItem extends Component {
             <span className="schedule-card-available-status">UNAVAILABLE</span>
           </div>
         </div>
-        <EventDetails />
+        <EventDetails showModal={showModal}/>
       </div>
     );
   }
