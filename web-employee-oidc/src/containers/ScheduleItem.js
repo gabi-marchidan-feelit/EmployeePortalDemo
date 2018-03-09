@@ -1,6 +1,16 @@
 import React, {Component} from 'react';
+import EventDetails from './eventDetails';
 
 export default class ScheduleItem extends Component {
+  constructor(props) {
+    super(props);
+    this.handleModalOpen = this.handleModalOpen.bind(this);
+    this.modalState = false;
+  }
+
+  handleModalOpen() {
+    return true;
+  }
   render() {
     return(
       <div className="row schedule-content-card">
@@ -13,7 +23,7 @@ export default class ScheduleItem extends Component {
           </div>
         </div>
         <div className="col-10 schedule-card noPadding">
-          <div className="schedule-card-info schedule-card-active-blue">
+          <div className="schedule-card-info schedule-card-active-blue" onClick={this.handleModalOpen}>
             <div className="schedule-card-info-title">
               PetCo AQ1
             </div>
@@ -53,6 +63,7 @@ export default class ScheduleItem extends Component {
             <span className="schedule-card-available-status">UNAVAILABLE</span>
           </div>
         </div>
+        <EventDetails />
       </div>
     );
   }

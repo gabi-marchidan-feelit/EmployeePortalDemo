@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Navigation from '../components/utils/navigation';
 import Datepicker from '../components/utils/datepicker';
-import ScheduleItem from './ScheduleItem';
+import ScheduleItem from './scheduleItem';
 
 export default class ScheduleList extends Component {
   render() {
