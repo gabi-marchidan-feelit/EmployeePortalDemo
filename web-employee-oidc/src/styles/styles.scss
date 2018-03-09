@@ -49,9 +49,6 @@ body {
 .text-yellow {
   color:#F3A147;
 }
-.modal {
-  display: block;
-}
 .semiBoldText {
   font-weight:600 !important;
 }
@@ -360,11 +357,37 @@ button:focus {
 .schedule-content .schedule-card-status .schedule-card-available-status {
   font-weight:bold;
 }
+@media screen and (max-width: 395px) {
+  .schedule-card-date {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .schedule-content .schedule-card-details .schedule-card-buttons-wrapper button {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 374px) {
+  .schedule-content .schedule-card-details .schedule-card-buttons-wrapper button {
+    font-size: 0.7rem;
+  }
+}
 // END SCHEDULE CONTENT
 /* FULL PAGE MODAL */
 .fullPageModal {
   width: 100%;
   height:100%;
+  top:100%;
+  display: block;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s top linear;
+}
+.fullPageModal.show {
+  top: 0;
+  opacity: 1;
+  z-index:1050;
+  transition: 0.3s top linear;
 }
 .fullPageModal .modal-dialog {
   width: 100%;
@@ -375,6 +398,7 @@ button:focus {
   background: #fff;
   border-radius: 0;
   height: 100%;
+  width:100vw;
 }
 .fullPageModal .modal-dialog .modal-content .modal-header {
   background: #990033;
@@ -455,5 +479,6 @@ button:focus {
   width:100%;
   border:1px solid #8F012F;
   padding: 20px 0;
+  margin-bottom:10px;
 }
 /* END FULL PAGE MODAL */

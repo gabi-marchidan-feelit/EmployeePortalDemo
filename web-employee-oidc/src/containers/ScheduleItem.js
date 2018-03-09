@@ -14,7 +14,6 @@ export default class ScheduleItem extends Component {
   handleModalOpen(e) {
     e.preventDefault();
     const {showModal} = this.state;
-    console.log('here we go');
     this.setState({
       showModal: showModal === 'false' ? 'true' : 'false'
     });

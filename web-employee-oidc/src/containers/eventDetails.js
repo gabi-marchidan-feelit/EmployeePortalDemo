@@ -3,16 +3,20 @@ import React, {Component} from 'react';
 export default class EventDetails extends Component {
   constructor(props) {
     super(props);
+    this.handleModalClose = this.handleModalClose.bind(this);
+  }
+  handleModalClose() {
+
   }
   render() {
     return(
       <div>
-        <div id="modal1" className={`fade fullPageModal ${this.props.showModal === 'true' ? 'show' : ''}`}>
+        <div id="modal1" className={`modal fade fullPageModal ${this.props.showModal === 'true' ? 'show' : ''}`}>
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">Event Detail</h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.handleModalClose}>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
