@@ -64,8 +64,7 @@ export default class Navigation extends Component {
               </div>
             </div>
 
-            <div class="navbar-backdrop">
-            </div>
+            <div className="navbar-backdrop"/>
           </div>
         </div>
       </nav>

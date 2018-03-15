@@ -29,6 +29,9 @@ body {
 .noPadding {
   padding: 0 !important;
 }
+.noMargin {
+  margin: 0 !important;
+}
 .displayNone {
   display: none !important;
 }
@@ -42,6 +45,8 @@ body {
 }
 .btn-rgis-transparent {
   background: transparent;
+  border: none;
+  outline: none;
 }
 .text-red {
   color:#990033;
@@ -49,8 +54,14 @@ body {
 .text-yellow {
   color:#F3A147;
 }
+.text-white {
+  color: #fff;
+}
 .semiBoldText {
   font-weight:600 !important;
+}
+.boldText {
+  font-weight:700 !important;
 }
 .normalText {
   font-weight:400 !important;
@@ -137,7 +148,7 @@ body {
 
 /*END LOGIN FORM*/
 
-// NAVIGATION
+/*NAVIGATION*/ 
 button {
   outline: none !important;
 }
@@ -249,9 +260,9 @@ button:focus {
     float: left;
   }
 }
-// END NAVIGATION
+/* END NAVIGATION */
 
-// DATE PICKER
+/* DATE PICKER */
 .react-datepicker__day--selected:hover, .react-datepicker__day--in-selecting-range:hover, .react-datepicker__day--in-range:hover {
   background-color: gray;
 }
@@ -324,9 +335,11 @@ button:focus {
   transform: translate3d(85px, 100px, 0px) !important;
 }
 
-// END DATE PICKER
+/* END DATE PICKER */
 
-// SCHEDULE CONTENT
+
+
+/* SCHEDULE CONTENT */
 .schedule-content {
   margin: 15px 15px 0 15px;
   border-top: 1px solid #999999;
@@ -352,6 +365,9 @@ button:focus {
 .schedule-content .schedule-card-today > div {
   color: #980235;
   font-weight: bold;
+}
+.schedule-content .schedule-card-date {
+  font-weight: 400;
 }
 .schedule-content .schedule-card-date > div.schedule-card-date-day {
   font-size:25px;
@@ -394,6 +410,7 @@ button:focus {
 }
 .schedule-content .schedule-card-details .schedule-card-buttons-wrapper {
   margin-top: 20px;
+  min-height: 33px;
 }
 .schedule-content .schedule-card-details .schedule-card-buttons-wrapper button {
   font-weight:bold;
@@ -428,25 +445,19 @@ button:focus {
     font-size: 0.7rem;
   }
 }
-// END SCHEDULE CONTENT
+/* END SCHEDULE CONTENT */
 /* FULL PAGE MODAL */
 .fullPageModal {
   width: 100%;
   height:100%;
-  top:100%;
   display: block;
-  opacity: 0;
-  transition: 0.4s all linear;
-}
-.fullPageModal.show {
-  top: 0;
-  opacity: 1;
-  transition: 0.4s all linear;
+
 }
 .fullPageModal .modal-dialog {
   width: 100%;
   height: 100%;
   margin: 0;
+  transform: translate(0) !important;
 }
 .fullPageModal .modal-dialog .modal-content {
   background: #fff;
@@ -458,6 +469,7 @@ button:focus {
   background: #990033;
   color: #fff;
   padding: 25px 15px;
+  border: none;
 }
 .fullPageModal .modal-dialog .modal-content .modal-header h5 {
   font-weight:600;
@@ -469,63 +481,6 @@ button:focus {
   opacity: 1;
   font-weight: 100;
 }
-.fullPageModal .eventDetails-content {
-  padding: 30px 20px 15px;
-}
-.fullPageModal .eventDetails-content p {
-  margin:0;
-  font-weight:400;
-  font-size: 18px;
-}
-.fullPageModal .eventDetails-content p.title {
-  font-size:22px;
-  margin-bottom:10px;
-}
-.fullPageModal .eventDetails-content .row {
-  margin-bottom: 20px;
-}
-.fullPageModal .eventDetails-content .range {
-  margin-top: 15px;
-}
-.fullPageModal .eventDetails-content .rangeBar.rangeBar-sm {
-  width:35%;
-}
-.fullPageModal .eventDetails-content .rangeBar.rangeBar-md {
-  width:45%;
-}
-.fullPageModal .eventDetails-content .rangeBar.rangeBar-lg {
-  width:55%;
-}
-.fullPageModal .eventDetails-content .rangeBar.rangeBar-xl {
-  width:65%;
-}
-.fullPageModal .eventDetails-content .rangeBar {
-  height: 2px;
-  display: inline-block;
-  background: #9F9FA0;
-  position: relative;
-  margin: 0 10px 0;
-  top: -4px;
-}
-.fullPageModal .eventDetails-content .rangeBar .rangeCircle {
-  height:10px;
-  width:10px;
-  border-radius:50%;
-  background: #9F9FA0;
-  position: absolute;
-  right:0;
-  transform: translateY(-4px);
-}
-.fullPageModal .eventDetails-content .range-active {
-  color: #990033;
-  font-weight: 600;
-}
-.fullPageModal .eventDetails-content .range-active .rangeBar {
-  background: #990033;
-}
-.fullPageModal .eventDetails-content .range-active .rangeCircle {
-  background: #990033;
-}
 .fullPageModal .modal-footer {
   border: none;
 }
@@ -536,3 +491,110 @@ button:focus {
   margin-bottom:10px;
 }
 /* END FULL PAGE MODAL */
+/* EVENT DETAILS SECTION */
+.eventDetails-content {
+  padding: 30px 20px 15px;
+  overflow-y: auto;
+}
+.eventDetails-content p {
+  margin:0;
+  font-weight:400;
+  font-size: 15px;
+}
+.eventDetails-content p.title {
+  font-size:18px;
+  margin-bottom:10px;
+}
+.eventDetails-content .row {
+  margin-bottom: 20px;
+}
+.eventDetails-content .range {
+  margin-top: 15px;
+}
+.eventDetails-content .rangeBar.rangeBar-sm {
+  width:35%;
+}
+.eventDetails-content .rangeBar.rangeBar-md {
+  width:45%;
+}
+.eventDetails-content .rangeBar.rangeBar-lg {
+  width:55%;
+}
+.eventDetails-content .rangeBar.rangeBar-xl {
+  width:65%;
+}
+.eventDetails-content .rangeBar {
+  height: 2px;
+  display: inline-block;
+  background: #9F9FA0;
+  position: relative;
+  margin: 0 10px 0;
+  top: -4px;
+}
+.eventDetails-content .rangeBar .rangeCircle {
+  height:10px;
+  width:10px;
+  border-radius:50%;
+  background: #9F9FA0;
+  position: absolute;
+  right:0;
+  transform: translateY(-4px);
+}
+.eventDetails-content .range-active {
+  color: #990033;
+  font-weight: 600;
+}
+.eventDetails-content .range-active .rangeBar {
+  background: #990033;
+}
+.eventDetails-content .range-active .rangeCircle {
+  background: #990033;
+}
+/* END EVENT DETAILS SECTION */
+/* EVENT DETAILS CONFIRMED SECTION */
+.eventDetails-backButton {
+  margin-right:20px;
+}
+.eventDetails-tabs {
+  background: $rgis-red;
+  font-size: 14px;
+  position: relative;
+  top: -1px;
+}
+.eventDetails-tabs > div {
+  padding-bottom:10px;
+  opacity: 0.7;
+  border-bottom: 4px solid $rgis-red;
+}
+.eventDetails-tabs > div.active {
+  opacity: 1;
+  border-bottom: 4px solid #5FA3A1;
+}
+/* END */
+
+/* ANIMATIONS */
+.animation-rightToLeft {
+  display: block;
+  position: fixed;
+  left: 100vw;
+  opacity: 1;
+  transition: 0.4s left linear !important;
+}
+.animation-rightToLeft.show {
+  left:0;
+  transition: 0.4s left linear !important;
+}
+.animation-topToBottom {
+  display: block;
+  position: fixed;
+  top: 100vh;
+  opacity: 0;
+  transition: 0.4s all linear !important;
+}
+.animation-topToBottom.show {
+  opacity: 1;
+  top:0;
+  transition: 0.4s all linear !important;
+}
+
+/* END ANIMATIONS */
