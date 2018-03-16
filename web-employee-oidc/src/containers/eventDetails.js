@@ -3,15 +3,18 @@ import React, {Component} from 'react';
 export default class EventDetails extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      store: true
+    }
     this.handleModalClose = this.handleModalClose.bind(this);
   }
   handleModalClose() {
-    this.props.modalCloseCallBack();
+    this.props.modalCloseFromChild();
   }
   render() {
     return(
       <div>
-        <div id="modal1" className={`modal fade fullPageModal ${this.props.showModal === 'true' ? 'show' : ''}`}>
+        <div id="modal1" className={`modal fade fullPageModal animation-topToBottom ${this.props.showModal === true ? 'show' : ''}`}>
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">
